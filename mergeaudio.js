@@ -14,7 +14,7 @@ const VERSE_LENGTH = 6236
 
 let foldervals = fs.readdirSync(path.join(__dirname,'.')).filter(e=> /\.mp3$/i.test(e)).sort()
 
-let audioPath = fs.readdirSync(path.join(__dirname,'audios'))
+let audioPath = path.join(__dirname,'audios')
 
       // Making the temporary directory
       fs.mkdirSync(audioPath, {
