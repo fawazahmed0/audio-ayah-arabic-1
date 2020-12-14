@@ -16,6 +16,11 @@ let foldervals = fs.readdirSync(path.join(__dirname,'.')).filter(e=> /\.mp3$/i.t
 
 let audioPath = fs.readdirSync(path.join(__dirname,'audios'))
 
+      // Making the temporary directory
+      fs.mkdirSync(audioPath, {
+        recursive: true
+      });
+
 counter = 0;
 let testarr = []
 
