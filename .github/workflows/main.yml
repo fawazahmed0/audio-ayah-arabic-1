@@ -17,8 +17,10 @@ jobs:
           del /f audhubillah.mp3
           del /f bismillah.mp3
           choco install ffmpeg
+          choco install zip
           node mergeaudio.js
-          zip -r my-artifact.zip audios
+      - shell: cmd
+        run: zip -r my-artifact.zip audios
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
